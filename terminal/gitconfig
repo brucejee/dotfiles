@@ -1,30 +1,57 @@
 [user]
-	email = fangwentong2012@gmail.com
-	name = fangwentong
+    email = 359166811@qq.com
+    name = jialuhua
 [color]
-	ui = true
+    ui = true
     status = auto
     branch = auto
     diff = auto
     interactive = auto
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
 [core]
-	excludesfile = /Users/tong/.gitignore_global
+    excludesfile = /home/jlh/.gitignore
     editor = vim
-	autocrlf = input
+    autocrlf = input
 [merge]
     tool = vimdiff
 [pull]
     rebase = true
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    l = log --stat --decorate --abbrev-commit --max-count=3
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    ll = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset' --decorate --abbrev-commit --max-count=20
+    st = status
+    a = add
+    ap = add -p
+    br = branch
+    ci = commit
+    c = commit --verbose
+    ca = commit -a --verbose
+    cm = commit -m
+    cam = commit -a -m
+    co = checkout
+    m = commit --amend --verbose
+    d = diff
+    ds = diff --stat
+    dc = diff --cached
+    com =checkout master
+    sta = stash
+    stal = stash list
+    rl = ref log
+    rao = remote add origin
+    ac = !git add . && git commit -am
+    pushitgood = push -u origin --all
+    sbi = submodule init
+    sbu = submodule update --init --recursive
+    sbp = submodule foreach git pull
+    sbc = submodule foreach git checkout master
 [filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+    clean = git hawser clean %f
+    smudge = git hawser smudge %f
+    required = true
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
